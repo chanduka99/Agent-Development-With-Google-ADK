@@ -1,0 +1,5 @@
+setup.txt
+agentVenv
+*.agentVenv
+.env
+**/.env    
