@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from google.adk.runners import Runner
 from google.adk.sessions import DatabaseSessionService
 from memory_agent import memory_agent
-
+from utils import call_agent_async
 
 
 
@@ -69,7 +69,7 @@ async def main_async():
             break
 
         #process the user query through the agent
-
+        await call_agent_async(runner=runner,user_id=USER_ID,session_id=SESSION_ID,query=user_input);
 
 
 
